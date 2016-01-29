@@ -1,0 +1,22 @@
+{
+  "name": "imap-sample",
+  "version": "1.0.0",
+  "description": "An implementation of sample imap sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kantharuban2006/imap-sample"
+  },
+  "keywords": [
+    "heroku-imap"
+  ],
+  "author": "Ruban",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kantharuban2006/imap-sample/issues"
+  },
+  "homepage": "https://github.com/kantharuban2006/imap-sample"
+}
