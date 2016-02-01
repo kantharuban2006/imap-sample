@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(request, response) {
   //response.send('-Hello User, This is a basic test for Heroku usage-');
 	var mailP = new mailParser();
-	//response.contentType('application/json');
+	response.contentType('application/json');
 	var outcome= [];
 	outcome = mailP.connectMail();
 	console.log('Outcome:'+outcome);
