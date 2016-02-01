@@ -13,7 +13,7 @@ app.get('/', function(request, response) {
 	var outcome= [];
 	outcome = mailP.connectMail();
 	console.log('Outcome:'+outcome);
-	setTimeout(response.send( 'result:'+outcome);, 20000);
+	setTimeout(response.send( 'result:'+outcome), 10000);
 	
 });
 
