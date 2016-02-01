@@ -1,0 +1,9 @@
+From: helpdesk@payoda.com
+To: kantharuban.s@payoda.com
+Date: 27 Jan 2016 16:57:46 +0530
+Subject: Your ticket IT29899has been created
+
+ Heroku in my machine for a POC in INTROS project.<br/><br/><a=
+ href=3Dhttp://intranet/Helpdesk/MyTickets.aspx>Click here to vie=
+w the status</a><br/><br/>Thank You<br/>Admin
+
