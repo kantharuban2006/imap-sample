@@ -7,8 +7,8 @@ var imap = new Imap({
   //password: 'yahoo maill password',
   //host: 'imap.mail.yahoo.com',
   
-  user: 'mailid@gmail.com',
-  password: 'gmail password',
+  user: 'kantharuban.s@payoda.com',
+  password: 'payoda@apr15',
   host: 'imap.gmail.com',
   
   port: 993,
