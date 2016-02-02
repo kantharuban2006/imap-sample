@@ -17,7 +17,7 @@ app.get('/', function(request, response) {
 	
 	outcome = mailP.connectMail();
 	console.log('Outcome:'+outcome);
-	response.send('result:'+outcome);
+	response.send('Please check the project location for the results as files, check console for filtered results');
 	
 	var md5gen = new md5();
 	var resultmd5 = md5gen.getHashForAMail("someone@gmail.com");
