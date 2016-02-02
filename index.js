@@ -1,19 +1,35 @@
 var express = require('express');
 var mailParser = require("./mailParser.js");
+var md5 = require("./md5Converter.js");
 var app = express();
-
+var http = require('http');
+var fs = require('fs');
+	
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-  //response.send('-Hello User, This is a basic test for Heroku usage-');
+
 	var mailP = new mailParser();
 	response.contentType('application/json');
 	var outcome= [];
+	
 	outcome = mailP.connectMail();
 	console.log('Outcome:'+outcome);
-	setTimeout(response.send( 'result:'+outcome), 30000);
+	response.send('result:'+outcome);
+	
+	var md5gen = new md5();
+	var resultmd5 = md5gen.getHashForAMail("someone@gmail.com");
+	console.log('resulting md5:'+resultmd5);
+	
+    var url = "http://www.gravatar.com/avatar/"+resultmd5+".jpg";
+	var dest = "image.jpg";
+
+	var file = fs.createWriteStream(dest);
+	var request = http.get(url, function(response) {
+	response.pipe(file);
+	});
 	
 });
 

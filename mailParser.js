@@ -7,11 +7,11 @@ var result = [];
 function MailParser(){
 result= [];
 imap = new Imap({
-  user: 'kantharuban2006@yahoo.com',
-  password: 'elie535455',
+  user: 'someone@yahoo.com',
+  password: 'mailPassword',
   host: 'imap.mail.yahoo.com',
   
-  //user: 'kantharuban.s@payoda.com',
+  //user: 'someone@payoda.com',
   //password: 'mailpassword',
   //host: 'imap.gmail.com',
   
@@ -58,11 +58,14 @@ openInbox(function(err, box) {
         if (info.which !== 'TEXT')
 		{
           //console.log(prefix + 'Parsed header: %s', inspect(Imap.parseHeader(buffer)));
-		  result.push(prefix + 'Parsed header: %s', inspect(Imap.parseHeader(buffer)));
-		  console.log(JSON.stringify(result));
+		  result.push(prefix, inspect(Imap.parseHeader(buffer)));
+		  console.log(JSON.stringify(result));	  
 		  }
         else
+		{
           console.log(prefix + 'Body [%s] Finished', inspect(info.which));
+		  }
+		  
 		});
 		
 		});
