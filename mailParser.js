@@ -4,12 +4,12 @@ var Imap = require('imap'),
 var fs = require('fs'), fileStream;
 var imap; 
 var result = [];
-function MailParser(){
+function MailParser(mailid,passwordProvided,imaphost){
 result= [];
 imap = new Imap({
-  user: 'someone@yahoo.com',
-  password: 'mailPassword',
-  host: 'imap.mail.yahoo.com',
+  user: mailid,
+  password: passwordProvided,
+  host: imaphost,
   
   //user: 'someone@payoda.com',
   //password: 'mailpassword',
