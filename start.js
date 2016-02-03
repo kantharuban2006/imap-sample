@@ -5,14 +5,14 @@ var s3Download = require("./s3Bucket_download.js");
 var http = require('http');
 var fs = require('fs');
 
-	var mailP = new mailParser('kantharuban2006@yahoo.com','elie535455','imap.mail.yahoo.com');
+	var mailP = new mailParser('someone@yahoo.com','password','imap.mail.yahoo.com');
 	var outcome= [];
 	
 	outcome = mailP.connectMail();
 	//console.log();
 	
 	var md5gen = new md5();
-	var resultmd5 = md5gen.getHashForAMail("kantharuban2006@gmail.com");
+	var resultmd5 = md5gen.getHashForAMail("someone@gmail.com");
 	console.log('resulting md5:'+resultmd5);
 	
     var url = "http://www.gravatar.com/avatar/"+resultmd5+".jpg";
