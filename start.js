@@ -5,13 +5,13 @@ var s3Download = require("./s3Bucket_download.js");
 var http = require('http');
 var fs = require('fs');
 
-	var mailP = new mailParser('someone@yahoo.com','password','imap.mail.yahoo.com');
+	var mailP = new mailParser('kanth.ruban@gmail.com','sinniah','imap.gmail.com');
 	var outcome= [];
 	
 	outcome = mailP.connectMail();
 	//console.log();
 	
-	var md5gen = new md5();
+	/*var md5gen = new md5();
 	var resultmd5 = md5gen.getHashForAMail("someone@gmail.com");
 	console.log('resulting md5:'+resultmd5);
 	
@@ -26,6 +26,6 @@ var fs = require('fs');
 	var s3Connection = new S3Upload();
 	s3Connection.uploadToS3("image.jpg","test","./");
 	var s3Connection1 = new s3Download();
-	s3Connection1.downloadFromS3("receivedImage.jpg","./","image.jpg","test");
+	s3Connection1.downloadFromS3("receivedImage.jpg","./","image.jpg","test");*/
 	
 	
